@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Autofac" />
+    <None Remove="Microsoft.Extensions.Configuration" />
+    <None Remove="Microsoft.Extensions.Configuration.FileExtensions" />
+    <None Remove="Microsoft.Extensions.Configuration.Json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenSquare.CodeHB.Domain\OpenSquare.CodeHB.Domain.csproj" />
+    <ProjectReference Include="..\OpenSquare.CodeHB.HttpClient\OpenSquare.CodeHB.HttpClient.csproj" />
+    <ProjectReference Include="..\OpenSquare.CodeHB.Helper\OpenSquare.CodeHB.Helper.csproj" />
+    <ProjectReference Include="..\OpenSquare.CodeHB.Service\OpenSquare.CodeHB.Service.csproj" />
+  </ItemGroup>
+</Project>

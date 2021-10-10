@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Repository\" />
+    <None Remove="Escolas\Repository\" />
+    <None Remove="Escolas\Mapper\" />
+    <None Remove="Escolas\Document\" />
+    <None Remove="AutoMapper" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Microsoft.Extensions.Configuration" />
+    <None Remove="Bing\" />
+    <None Remove="Bing\Repository\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Escolas\" />
+    <Folder Include="Escolas\Repository\" />
+    <Folder Include="Escolas\Mapper\" />
+    <Folder Include="Escolas\Document\" />
+    <Folder Include="Bing\" />
+    <Folder Include="Bing\Repository\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenSquare.CodeHB.Domain\OpenSquare.CodeHB.Domain.csproj" />
+  </ItemGroup>
+</Project>
