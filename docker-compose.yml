@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  opensquare.codehb.api:
+    image: ${DOCKER_REGISTRY-}opensquarecodehb
+    build:
+      context: .
+      dockerfile: OpenSquare.CodeHB.API/Dockerfile
