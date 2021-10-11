@@ -43,10 +43,10 @@ namespace OpenSquare.CodeHB.API.Controllers
 
         [HttpGet, Route("Directions")]
         [SwaggerResponse(200, "Obter as direçoes do ponto A ao Ponto B", typeof(Domain.Model.Bing.Point))]
-        public async Task<IActionResult> Directions([FromQuery]string lngorigem, [FromQuery]string latorigem, [FromQuery]string lngdestino,[FromQuery]string latdestino)
+        public async Task<IActionResult> Directions([FromQuery]double sLatitude, [FromQuery] double sLongitude, [FromQuery] double eLatitude,[FromQuery] double eLongitude)
         {
-
-            return Ok();
+            var result = await _escolaService.GetBingRoute(sLatitude, sLongitude, eLatitude, eLongitude);
+            return Ok(result);
         }
     }
 }

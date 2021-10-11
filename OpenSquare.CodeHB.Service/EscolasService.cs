@@ -34,6 +34,11 @@ namespace OpenSquare.CodeHB.Service
             return result.resourceSets.FirstOrDefault().resources.FirstOrDefault().point;
         }
 
+        public async Task<string> GetBingRoute(double sLatitude, double sLongitude, double eLatitude,
+                               double eLongitude)
+        {
+            return await _bingRepository.GetbingRoute(sLatitude, sLongitude, eLatitude, eLongitude);
+        }
 
         private async Task<double> Calculate(double sLatitude, double sLongitude, double eLatitude,
                                double eLongitude)

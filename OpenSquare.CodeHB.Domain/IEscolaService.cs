@@ -8,5 +8,7 @@ namespace OpenSquare.CodeHB.Domain
     {
         Task<IEnumerable<Domain.Model.Escolas>> GetAllEscolas();
         Task<Domain.Model.Bing.Point> GetLogradouro(string logradouro);
+        Task<string> GetBingRoute(double sLatitude, double sLongitude, double eLatitude,
+                               double eLongitude);
     }
 }
