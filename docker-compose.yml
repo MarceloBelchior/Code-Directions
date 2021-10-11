@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   opensquare.codehb.api:
-    image: opensquare.azurecr.io/opensquarecodehbapi:1.0.5
+    image: opensquare.azurecr.io/opensquarecodehbapi:1.0.6
     build:
       context: .
       dockerfile: OpenSquare.CodeHB.API/Dockerfile

@@ -29,13 +29,13 @@ namespace OpenSquare.CodeHB.API.Controllers
                 return Ok(result);
             return BadRequest("Erro to connect to webapi");
         }
-        [HttpGet, Route("Logradouro/{logradouro}")]
-        [SwaggerResponse(200, "Listagem de escolas obtidas no site https://dadosabertos.poa.br/ ", typeof(Domain.Model.Bing.Point))]
+        [HttpGet, Route("Logradouro/{cep}")]
+        [SwaggerResponse(200, "Coordenadas para obter a GEOCOORDENADAS da origem para desenhar o caminho no mapa. Via logradouro demonstrou-se muitas falhas", typeof(Domain.Model.Bing.Point))]
         [SwaggerResponse(400, "Invalid Request")]
-        public async Task<IActionResult> Logradouro([FromRoute] string logradouro)
+        public async Task<IActionResult> Logradouro([FromRoute] string cep)
         {
 
-            var result = await _escolaService.GetLogradouro(logradouro);
+            var result = await _escolaService.GetLogradouro(cep);
             if (result != null)
                 return Ok(result);
             return BadRequest("Erro to connect to webapi");
