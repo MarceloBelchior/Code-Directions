@@ -23,5 +23,6 @@ RUN dotnet publish "OpenSquare.CodeHB.API.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
+COPY /dist/CodeHB .
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "OpenSquare.CodeHB.API.dll"]
